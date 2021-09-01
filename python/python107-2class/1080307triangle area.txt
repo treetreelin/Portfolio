@@ -1,0 +1,5 @@
+# -*- coding: utf-8 -*-
+bottom = float(input("請輸入底長:"))
+high = float(input("請輸入高度:"))
+area = bottom*high/2
+print("%s %.2f" %("三角形面積:",area))

@@ -1,0 +1,23 @@
+.product-remove{
+    width: 5%; /*寬度*/
+}
+.product-thumbnail{
+    width: 15%; /*寬度*/
+}
+.product-name{
+    width: 35%; /*寬度*/
+}
+.product-price, .product-quantity, .product-subtotal{
+    width: 15%; /*寬度*/
+}
+.product-quantity input{
+    width: 50%; /*寬度*/
+}
+@media screen and (max-width: 768px) {
+    .product-thumbnail{
+        display: none; /*將區塊隱藏*/
+    }
+    .product-quantity input{
+        width: 100%;
+    }
+}

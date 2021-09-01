@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>與菓點心鋪-結帳</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="../css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!--結帳-->
+         <section class="page-content">
+            <div class="container pt-5 pb-5">
+                <div class="row">
+                    <!--結帳訊息-->
+                    <div class="col-12 mb-3">
+                        <h2>結帳</h2>
+                        <p>感謝您的訂購!</p>
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            您目前尚未登入,請點擊 <a href="login.html" class="alert-link">[連結]</a>進行登入
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!--帳單資訊-->
+                    <div class="col-12 col-md-6 mb-3">
+                        <h2>帳單資訊</h2>
+                        <form action="">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="LastName">姓氏
+                                        <span class="text-danger">*</span>
+                                    </label>
+                                    <input type="text" class="form-control" id="LastName" required placeholder="必填,例如:王">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="FristName">名字
+                                        <span class="text-danger">*</span>
+                                    </label>
+                                    <input type="text" class="form-control" id="FristName" required placeholder="必填,例如:小明">
+                                </div>
+                            </div>
+                            <!--姓氏和名字沒有顯示同一排-->
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="tel">連絡電話
+                                        <span class="text-danger">*</span>
+                                    </label>
+                                    <input type="number" class="form-control" id="tel" required placeholder="必填,例如:0912-345-678">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="EMail">電子信箱
+                                        <span class="text-danger">*</span>
+                                    </label>
+                                    <input type="email" class="form-control" id="EMail" required placeholder="必填,電子信箱">
+                                </div>
+                            </div>
+                            <!--連絡電話和電子信箱也沒有顯示成同一排-->
+                            <div class="form-group">
+                                <label for="Address">地址
+                                    <span class="text-danger">*</span>
+                                </label>
+                                <input type="text" class="form-control" id="Address" required placeholder="必填,縣/市-區/鄉/鎮-路/街-號/樓">
+                            </div>
+                        </form>
+                    </div>
+                    <!--您的訂單-->
+                     <div class="col-12 col-md-6">
+                        <h2>您的訂單</h2>
+                        <div class="table-responsive-sm">
+                            <table class="table table-bordered table-striped">
+                                <tbody>
+                                    <tr>
+                                        <td>商品</td>
+                                        <td>總計</td>
+                                    </tr>
+                                    <tr>
+                                        <td>香滷牛腱心</td>
+                                        <td>NT$&nbsp;200</td>
+                                    </tr>
+                                    <tr>
+                                        <td>香滷豆干條</td>
+                                        <td>NT$&nbsp;150</td>
+                                    </tr>
+                                    <tr>
+                                        <td>小計</td>
+                                        <td>NT$&nbsp;350</td>
+                                    </tr>
+                                    <tr>
+                                        <td>運送方式</td>
+                                        <td>
+                                            <div class="form-check">
+                                                <input id="Expenses" name="tran-expenses" type="radio" class="form-check-input">
+                                                <label for="form-check-label">免運費</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input id="PostOffice" name="tran-expenses" type="radio" class="form-check-input" checked>
+                                                <label for="form-check-label">郵局:NT$&nbsp;80</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>總計</td>
+                                        <td>NT$&nbsp;330</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="2">
+                                            <a href="#" class="btn btn-outline-info btn-lg float-right">下單購買</a>
+                                        </td>
+                                    </tr>
+                                    <!--沒有如預想的下單購買按鈕靠右-->
+                                </tfoot>
+                            </table>
+                        </div>
+                     </div>
+                </div>
+
+            </div>
+         </section>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>

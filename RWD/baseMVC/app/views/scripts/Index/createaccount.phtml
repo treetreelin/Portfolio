@@ -1,0 +1,71 @@
+
+			<div class="container" id="app">
+				<div class="header">
+					<h2>建立帳號</h2>
+				</div>
+				<div class="content">
+					<div>
+					<div>
+						<label for="sid">帳號(學號):</label>
+						<input type="text" id="sid" name="sid" v-model="stid"/>
+					</div>
+					<div>
+						<label for="pw">密碼:</label>
+						<input type="password" name="pw" id="pw"/>
+					</div>  
+					<div>
+						<label for="comformpw">確認密碼:</label>
+						<input type="password" name="comformpw" id="comformpw"/>
+					</div>            
+					<div>
+						<label for="name">姓名:</label>
+						<input type="text" id="name" name="name" v-model="sname"/>
+					</div>
+					<div>
+						<label for="mail">E-mail:</label>
+						<input type="email" name="email" id="mail" v-model="semail"/>
+					</div>
+					<div>
+						<label>性別：</label>
+						<label for="sex_1">
+							<input type="radio" id="sex_1" name="sex" value="male" v-model="ssex">男
+						</label>
+						<label for="sex_2">
+							<input type="radio" id="sex_2" name="sex" value="female" v-model="ssex">女
+						</label>
+					</div>
+					<div>
+						<label>班級：</label>
+						<select name="class" v-model="sclass">
+							<option value="cs1" >日資工一甲</option>
+							<option value="cs2" >日資工二甲</option>
+							<option value="cs3" >日資工三甲</option>
+							<option value="cs4" >日資工四甲</option>
+							<option value="tcs1" >夜資工一甲</option>
+							<option value="tcs2" >夜資工二甲</option>
+							<option value="tcs3" >夜資工三甲</option>
+							<option value="tcs4" >夜資工四甲</option>
+						</select>
+					</div>
+					<div>
+						<button type="submit">送出</button>
+						<button type="reset">清除</button>
+					</div>
+					</form>  
+				</div>
+			</div>
+			<div style="text-align:center">
+				<p>帳號(學號):{{stid}}</p> 
+				<p>姓名:{{sname}}</p>
+				<p>E-mail:{{semail}}</p>
+				<p>性別:{{ssex}}</p>
+				<p>班級:{{sclass}}</p>
+			</div>
+
+		
+	
+	<!-- Scripts -->
+	<!--
+    <script src="assets/js/computed.js"></script>
+	-->
+<script src="assets/js/computed.js" ></script>

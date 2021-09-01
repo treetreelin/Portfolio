@@ -1,0 +1,11 @@
+def foottocm(foot):
+    high = foot * 0.3048
+    high *= 100
+    return high
+
+while(True):
+    infoot = input("請輸入身高 (呎):")
+    if(infoot == ""):
+        break
+    infoot = float(infoot)
+    print("你的身高為:%4.1f 公分" % foottocm(infoot))

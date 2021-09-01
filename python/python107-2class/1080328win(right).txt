@@ -1,0 +1,22 @@
+win = []
+print("開出順序:",end="")
+while(len(win)!=6):
+    import random
+    n = random.randint(1,49)
+    k = win.count(n)
+    if(k<=0):
+        win.append(n)
+for j in range(len(win)):
+    if(win[j]<10):
+        print("%s%d"%("0",win[j]),end=" ")
+    else:
+        print("%2d"%(win[j]),end=" ")  #產生6個中獎號碼
+        
+win2=sorted(win,reverse=False) #由小到大排序
+print()
+print("大小順序:",end="")
+for win3 in win2:
+    if(win3<10):
+        print("%s%d"%("0",win3),end=" ")
+    else:
+        print("%2d"%(win3),end=" ")

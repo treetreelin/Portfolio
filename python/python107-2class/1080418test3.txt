@@ -1,0 +1,37 @@
+play1=[]
+play2=[]
+Play1=[]
+Play2=[]
+while(len(play1)!=6):
+    import random
+    n = random.randint(1,99)
+    k = play1.count(n)
+    if(k<=0):
+        play1.append(n)
+print("Play1抽的號碼:",end="  ")
+print(list(play1))
+Play1 = sorted(play1,reverse=False)#由小到大排序Play1
+print("排序後的號碼:",end="  ")
+print(list(Play1))
+
+print()
+
+while(len(play2)!=6):
+    import random
+    n = random.randint(1,99)
+    k = play2.count(n)
+    if(k<=0):
+        play2.append(n)
+print("Play2抽的號碼:",end="  ")
+print(list(play2))
+Play2 = sorted(play2,reverse=False)#由小到大排序Play2
+print("排序後的號碼:",end="  ")
+print(list(Play2))
+
+if(Play1[0]<=Play2[0]):
+    if(Play1[0]<Play2[0]):
+        print("結果: Play1贏")
+    else:
+        print("結果: 平手")
+else:
+    print("結果: Play2贏")

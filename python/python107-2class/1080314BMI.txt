@@ -1,0 +1,10 @@
+h = float(input("請輸入身高(公尺):"))
+w = float(input("請輸入體重(公斤):"))
+BMI = w / (h)**2
+if(BMI>24):
+    s="體重過重"
+elif(BMI<18.5):
+    s="體重過輕"
+else:
+    s="體重標準"
+print("BMI值為%.2f,%s" % (BMI,s))

@@ -1,0 +1,10 @@
+inscore = 0
+list1 = []
+for i in range(1,5):
+    inscore =int(input("請輸入第 %d 位同學分數:" % i))
+    list1.append(inscore)
+
+print("最高分為: %d" % max(list1))
+print("最低分為: %d" % min(list1))
+print("總分為: %d" % sum(list1))
+print("平均為: %.2f"% (sum(list1)/len(list1)))

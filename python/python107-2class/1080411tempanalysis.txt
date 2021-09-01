@@ -1,0 +1,20 @@
+day = ["星期日","星期一","星期二","星期三","星期四","星期五","星期六"]
+temp= []
+for i in range(len(day)):
+    intemp = int(input("請輸入%s的溫度:"%(day[i])))
+    temp.append(intemp)
+x = min(temp)
+y = max(temp)
+l = temp.index(x)
+h = temp.index(y)
+sum = 0
+for j in range(len(temp)):
+    sum += temp[j]
+average = sum / len(day)
+print()
+print()
+print("       溫度分析")
+print("-----------------------")
+print("平均溫度:%3.1f" % (average))
+print("最低溫度:%d,在%s"%(temp[l],day[l]))
+print("最高溫度:%d,在%s"%(temp[h],day[h]))

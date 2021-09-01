@@ -1,0 +1,12 @@
+"""
+Spyder Editor
+
+This is a temporary script file.
+"""
+print("座號","國文","英文","數學")
+print("%4d%4d %4d %4d" %(1,98,100,76))
+print("%4d%4d %4d %4d" %(21,100,78,100))
+print("%4d%4d %4d %4d" %(123,78,67,89))
+
+
+Spyder Anaconda3

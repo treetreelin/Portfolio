@@ -1,0 +1,10 @@
+listname  = ["鍾明達","鄭廣月","何美麗"]
+listone   = [34210,23600,145000] 
+listtwo   = [9000,23900,83400] 
+listthree = [186500,127800,100000] 
+listfour  = [78900,125000,90000] 
+print("姓名     第一季   第二季   第三季   第四季")
+for i in range(0,3):
+    print(listname[i].ljust(5), str(listone[i]).rjust(6),
+          str(listtwo[i]).rjust(7),str(listthree[i]).rjust(8),
+          str(listfour[i]).rjust(7))

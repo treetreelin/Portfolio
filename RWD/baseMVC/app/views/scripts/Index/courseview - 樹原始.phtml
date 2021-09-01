@@ -1,0 +1,56 @@
+		<div class="container" id="courseviewapp">
+			<div class="header">
+				<h2>課程查詢</h2>
+				<div>
+					<div>
+						<label for="coursename">課程名稱搜尋:</label>
+						<input type="text" id="coursename" name="coursename" v-model="coursename" />
+					</div>
+					<div>
+						<button v-on:click="getcos">送出</button>
+						<button type="reset">清除</button>
+					</div>
+				</div> 
+			</div>
+			<div class="container">
+				<table class="tbl-course-view" >
+					<caption>課程搜尋結果</caption>
+					<thead>
+						<tr>
+							<th>學期</th>
+							<th>科目名稱</th>
+							<th>老師姓名</th>
+							<th>開課班級</th>
+							<th>必/選修</th>
+							<th>上課校區</th>
+							<th>上課時間</th>
+							<th>開課課號</th>
+							<th>科目代號</th>
+							<th>開放名額</th>
+							<th>選課人數</th>
+							<th>學分</th>
+							<th>備註</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr v-for="item in cosdata">
+							<td>{{item.semester}}</td>
+							<td>{{item.subject_name}}</td>
+							<td>{{item.teacher_name}}</td>
+							<td>{{item.class}}</td>
+							<td>{{item.course_type}}</td>
+							<td>{{item.campus}}</td>
+							<td>{{item.course_time}}</td>
+							<td>{{item.course_code}}</td>
+							<td>{{item.subject_code}}</td>
+							<td>{{item.quota}}</td>
+							<td></td>
+							<td>{{item.credit}}</td>
+							<td>{{item.remark}}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	<!-- Scripts -->
+    <script src="assets/js/courseview.js"></script>

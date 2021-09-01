@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>與菓點心鋪-會員註冊</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="../css/register.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <div class="container my-3">
+            <div class="row no-gutters">
+                <h3 class="title my-3">| 會員註冊<small>Recruit</small></h3>
+                <section class="page-content">
+                    <div class="container pt-5 pb-5">
+                        <div class="container">
+                            <!--會員基本資訊-->
+                            <div class="col-12 col-md-6 mb-3">
+                                <form action="">
+                                    <fieldset>
+                                    <legend>會員基本資料:</legend>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="LastName">姓氏
+                                                <span class="text-danger">*</span>
+                                            </label>
+                                            <input type="text" class="form-control" id="LastName" required placeholder="必填,例如:王">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="FristName">名字
+                                                <span class="text-danger">*</span>
+                                            </label>
+                                            <input type="text" class="form-control" id="FristName" required placeholder="必填,例如:小明">
+                                        </div>
+                                    </div>
+                                    <!--姓氏和名字沒有顯示同一排-->
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="user">帳號
+                                                <span class="text-danger">*</span>
+                                            </label>
+                                            <input type="text" class="form-control" id="user" required placeholder="必填,帳號(英文或數字)">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="password">密碼
+                                                <span class="text-danger">*</span>
+                                            </label>
+                                            <input type="password" class="form-control" id="password" required placeholder="必填,密碼包含(大小寫英文和數字)">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="user">性別
+                                                <span class="text-danger">*</span>
+                                            </label>
+                                            <br>
+                                            <input type="radio" name="sex" required value="male">男性<br>
+                                            <input type="radio" name="sex" required value="female">女性<br>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="password">出生年份
+                                                <span class="text-danger">*</span>
+                                            </label>
+                                            <br>
+                                            <select name="age">
+                                                <option value="2010">2010以後</option>
+                                                <option value="2000">2000~2009</option>
+                                                <option value="1990">1990~1999</option>
+                                                <option value="1980">1980~1989</option>
+                                                <option value="1970">1970~1979</option>
+                                                <option value="1960">1960~1969</option>
+                                                <option value="1950">1950~1959</option>
+                                                <option value="1940">1940~1949</option>
+                                                <option value="1930">1930~1939</option>
+                                                <option value="1920">1929以前</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="tel">連絡電話
+                                                <span class="text-danger">*</span>
+                                            </label>
+                                            <input type="number" class="form-control" id="tel" required placeholder="必填,例如:0912-345-678">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="EMail">電子信箱
+                                                <span class="text-danger">*</span>
+                                            </label>
+                                            <input type="email" class="form-control" id="EMail" required placeholder="必填,電子信箱">
+                                        </div>
+                                    </div>
+                                    <!--其他資訊-->
+                                    <div class="form-group">
+                                        <label for="Address">地址
+                                            <span class="text-danger">*</span>
+                                        </label>
+                                        <input type="text" class="form-control" id="Address" required placeholder="必填,縣/市-區/鄉/鎮-路/街-號/樓">
+                                    </div>
+                                    </fieldset>
+                                    <br>
+                                    <fieldset>
+                                    <legend>其他資料:</legend>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="pipeline">得知管道
+                                                <span class="text-danger"></span>
+                                            </label>
+                                            <br>
+                                            <input type="checkbox" name="vehicle" value="friend">親友介紹<br>
+                                            <input type="checkbox" name="vehicle" value="internet">網路資訊<br> 
+                                            <input type="checkbox" name="vehicle" value="paper">紙本廣告<br> 
+                                            <input type="checkbox" name="vehicle" value="browser">搜尋引擎<br>
+                                            <input type="checkbox" name="vehicle" value="other">其他<br>
+                                        </div>
+                                        <br>
+                                        <div class="form-group col-md-6">
+                                            <label for="password">是否想收到與菓點心鋪最新資訊的電子信件
+                                                <span class="text-danger"></span>
+                                            </label>
+                                            <br>
+                                            <input type="radio" name="sex" value="yes">是<br>
+                                            <input type="radio" name="sex" value="no">否<br>
+                                        </div>
+                                    </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary btn-xl disabled"  id="submitButton" type="submit">傳送</button>
+                    <button class="btn btn-primary btn-xl disabled" id="resetButton" type="reset">取消</button>
+                </section>
+            </div>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>

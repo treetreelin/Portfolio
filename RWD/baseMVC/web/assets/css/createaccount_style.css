@@ -1,0 +1,37 @@
+.header {
+    width:50%;
+    margin:auto;
+}
+.header h2{
+	background-color:#42a1f5;
+	font-family : "微軟正黑體", "Times New Roman";
+	color:white;
+	text-align : center;
+	padding : 10px 80px 20px 80px;/*上右下左*/
+	
+}
+.content {
+	width: 50%;
+    margin: auto;
+
+}
+.content form {
+	font-family : "微軟正黑體", "Times New Roman";
+	font-size : 25px; 
+	
+}
+.content input, select, button {
+	margin: 20px 4px 20px 4px;/*上右下左*/
+	font-size : 25px; 
+}
+.content input:focus{
+	background:#b5eaeb;
+}
+.content select:focus{
+	background:#b5eaeb;
+}
+.content button {
+	background-color:#42a1f5;
+	font-family : "微軟正黑體", "Times New Roman";
+	color:white;
+}

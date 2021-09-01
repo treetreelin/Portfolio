@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>與菓點心鋪-會員資料</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="../css/memberData.css" rel="stylesheet" />
+        <script>
+            function DataFuction(evt, DataName) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+                document.getElementById(DataName).style.display = "block";
+                evt.currentTarget.className += " active";
+            }
+        </script>
+    </head>
+    <body>
+        <!--會員資料-->
+        <h2>會員相關資料</h2>
+        <div class="tab">
+            <button class="tablinks" onclick="DataFuction(event, 'memberData')">會員資料</button>
+            <button class="tablinks" onclick="DataFuction(event, 'purchaseRecord')">購買紀錄</button>
+            <button class="tablinks" onclick="DataFuction(event, 'coupon')">優惠券</button>
+        </div>
+          
+        <div id="memberData" class="tabcontent">
+            <h3>會員資料</h3>
+            <section class="page-content">
+                   <div class="container pt-5 pb-5">
+                        <div class="container">
+                            <!--會員基本資訊-->
+                            <div class="col-12 col-md-6 mb-3">
+                                <form action="">
+                                    <fieldset>
+                                    <legend>會員基本資料:</legend>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="LastName">姓氏
+                                            </label>
+                                            <input type="text" class="form-control" id="LastName" required placeholder="必填,例如:王">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="FristName">名字
+                                            </label>
+                                            <input type="text" class="form-control" id="FristName" required placeholder="必填,例如:小明">
+                                        </div>
+                                    </div>
+                                    <!--姓氏和名字沒有顯示同一排-->
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="user">帳號
+                                            </label>
+                                            <input type="text" class="form-control" id="user" required placeholder="必填,帳號(英文或數字)">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="password">密碼
+                                            </label>
+                                            <input type="password" class="form-control" id="password" required placeholder="必填,密碼包含(大小寫英文和數字)">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="user">性別
+                                            </label>
+                                            <br>
+                                            <input type="radio" name="sex" required value="male">男性<br>
+                                            <input type="radio" name="sex" required value="female" checked>女性<br>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="password">出生年份
+                                            </label>
+                                            <br>
+                                            <select name="age">
+                                                <option value="2010">2010以後</option>
+                                                <option value="2000">2000~2009</option>
+                                                <option value="1990">1990~1999</option>
+                                                <option value="1980">1980~1989</option>
+                                                <option value="1970">1970~1979</option>
+                                                <option value="1960">1960~1969</option>
+                                                <option value="1950">1950~1959</option>
+                                                <option value="1940">1940~1949</option>
+                                                <option value="1930">1930~1939</option>
+                                                <option value="1920">1929以前</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="tel">連絡電話
+                                            </label>
+                                            <input type="number" class="form-control" id="tel" required placeholder="必填,例如:0912-345-678">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="EMail">電子信箱
+                                            </label>
+                                            <input type="email" class="form-control" id="EMail" required placeholder="必填,電子信箱">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <button class="btn btn-primary btn-xl disabled"  id="submitButton" type="submit">傳送</button>
+                    <button class="btn btn-primary btn-xl disabled" id="resetButton" type="reset">取消</button>
+                </section>
+        </div>
+          
+        <div id="purchaseRecord" class="tabcontent">
+            <h3>購買紀錄</h3>
+            <p>目前查無購買紀錄</p> 
+        </div>
+          
+        <div id="coupon" class="tabcontent">
+            <h3>優惠券資訊</h3>
+            <p>目前無新的優惠券</p>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

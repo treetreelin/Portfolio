@@ -1,0 +1,66 @@
+.header {
+    width:50%;
+    margin:auto;
+}
+.header h2{
+	background-color:#42a1f5;
+	font-family : "微軟正黑體", "Times New Roman";
+	color:white;
+	text-align : center;
+	padding : 10px 80px 10px 80px;/*上右下左*/
+}
+.header form {
+	font-family : "微軟正黑體", "Times New Roman";
+	font-size : 25px; 
+}
+.header input {
+	margin: 5px 1px 8px 1px;
+	font-size : 25px;
+	
+}
+.header input:focus{
+	background:#b5eaeb;
+}
+.header button {
+	background-color:#42a1f5;
+	font-family : "微軟正黑體", "Times New Roman";
+	color:white;
+	font-size : 25px; 
+}
+.tbl-course-view {
+    border-collapse:collapse;  /*邊框合併為單一個邊框*/
+    border-spacing:0px;        /*邊框間的距離*/
+    border:1px solid #000;     /*邊框樣式*/
+    margin:auto;
+}
+
+.tbl-course-view caption{
+	color:#42a1f5;
+	font-family : "微軟正黑體", "Times New Roman";
+	text-align : center;
+	padding : 20px 80px 20px 80px;/*上右下左*/
+	font-size : 25px; 
+}
+
+.tbl-course-view th {
+    background-color:#c8f1fa;
+    border:1px solid #000;      /*邊框樣式*/
+    font-family : "微軟正黑體", "Times New Roman";
+    font-weight : bold;
+	padding : 10px 20px 10px 20px;/*上右下左*/
+	font-size : 20px; 
+}
+
+.tbl-course-view td {
+    border:1px solid #000;      /*邊框樣式*/
+    font-family : "微軟正黑體", "Times New Roman";
+	padding : 10px 20px 10px 20px;/*上右下左*/
+	font-size : 20px; 
+
+}
+.tbl-course-view tr:nth-child(even) {
+	background:#b5eaeb;
+}
+.tbl-course-view tr:hover {
+	background:#eaeda8;
+}

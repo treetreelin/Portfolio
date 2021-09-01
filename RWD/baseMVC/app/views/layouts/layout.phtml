@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="author" content="carollai"> 
+<meta name="keywords" content="carollai">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>web title</title>
+    <!-- Bootstrap -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="assets/css/courseview_style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/createaccount_style.css">
+	
+	<!-- Scripts -->
+    <script src="assets/js/vonder/jquery.js" ></script>
+    <script src="assets/js/vonder/bootstrap.min.js" ></script>
+	<script src="https://unpkg.com/vue@next" ></script>
+	<script src="https://unpkg.com/vue@next"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js" ></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="javascripts/html5shiv.min.js"></script>
+      <script src="javascripts/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <section>
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #337ab7;">
+            <!-- Navbar content -->
+            <a class="navbar-brand" href="/">課程查詢</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/courseview">course view <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/createaccount">create account</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"  href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            item three
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="background-color: #337ab7;">
+                          <a class="dropdown-item" href="#">3-1</a>
+                          <a class="dropdown-item" href="#">3-2</a>
+                          <a class="dropdown-item" href="#">3-3</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </nav>
+        <!-- content -->
+        <div class="container">
+            <?php echo $this->content(); ?>
+        </div>
+    </section>  
+</body>
+</html>

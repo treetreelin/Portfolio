@@ -1,0 +1,24 @@
+import random as r
+def play(c):
+    sum = 0
+    print("%s開始擲"%(c))
+    for i in range(1,4):
+        num = r.randint(1,6)
+        print("第%d次點數= %d"%(i,num))
+        sum += num
+    print("總點數 = %d"%(sum))
+    return sum
+
+c = "賭王"
+a = play(c)
+print()
+ 
+c = "千王"
+b = play(c)
+
+if (a>b):
+    print("賭王贏")
+elif(a<b):
+    print("千王贏")
+else:
+    print("兩個人平手")

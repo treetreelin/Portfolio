@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+    <title>與菓點心鋪-產品細節</title>
+    <link href="../css/productDetail.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container my-3">
+        <div class="row no-gutters">
+            <h3 class="title my-3">| 產品細節<small>Detail</small></h3>
+        </div>
+        <div class="row">
+            <div class="col-lg mb-3">
+                <img src="http://fakeimg.pl/640x435" class="img-thumbnail">
+            </div>
+            <div class="col-lg mb-3">
+                <h3> 香滷牛腱心</h3>
+                <p> 用特製香料滷製的牛腱心,清爽不油膩,香辣下酒。</p>
+                <p> 價格：300 元 / 包</p>
+                <p> 分類：<span class="badge badge-danger mr-2">鹹食</span><span class="badge badge-warning mr-2">滷味</span></p>
+                <!--標籤無法顯示-->
+                <form class="form-inline">
+                    <label for="inlineFormInputNum">數量：</label>
+                    <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputNum">
+                    <button type="submit" class="btn btn-primary mb-2">送出</button>
+                </form>
+            </div>
+            <!--商品詳細資料-->
+            <div class="col-12 col-mod-9">
+              <div class="col-12">
+                <ul class="nav nav-tabs" id="ProductTab" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="description-tab" data-toggle="tab" href="#description" role="tab" aria-selected="true">描述</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#specification" role="tab" aria-controls="specification" aria-selected="false">商品規格</a>
+                  </li>
+                </ul>
+                <div class="tab-content" id="ProductionTabContent">
+                  <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="descripition-tab">
+                    <p>香滷牛腱心</p>
+                  </div>
+                  <div class="tab-pane fade" id="specification" role="tabpanel" aria-labelledby="specification-tab">
+                    <p>1包200公克</p>
+                    <!--商品規格無法顯示-->
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

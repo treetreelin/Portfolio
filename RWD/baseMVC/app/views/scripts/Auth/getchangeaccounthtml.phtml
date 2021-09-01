@@ -1,0 +1,72 @@
+<?php
+$gprole = $_SESSION["loginrole"];
+$gpid = ($gprole==0)?$this->_data['id']:$_SESSION["loginid"];
+$gpaccount = $this->_data['account'];
+$gprealname = ($gprole==0)?$this->_data['realname']:"";
+
+if((isset($_SESSION["changeAccount"]) && $_SESSION["changeAccount"]) || (isset($_SESSION["changePassword"]) && $_SESSION["changePassword"]) )
+{
+    $isCheckMode = true;
+    $gpaccount = "";
+}
+else
+{
+    $isCheckMode = false;
+}
+
+ ?>
+    <form id="changeAccountandPasswordForm" data-toggle="validator" role="form">
+    <?php if( !$isCheckMode && $gprole!=0 ) {?>
+        <div class="form-group col-md-12">
+            <label for="inputOldPassword" class="control-label">請輸入原密碼：</label>
+            <div >
+                <div class="form-group col-md-6">
+                    <input type="password" class="form-control" id="inputOldPassword" name="oldPassword" placeholder="請輸入原密碼" required >
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+        </div>
+    <?php } ?>
+    <?php if( (!$isCheckMode) || (isset($_SESSION["changeAccount"]) && $_SESSION["changeAccount"]) ){ ?>
+    <?php if ($isCheckMode) {?>
+        <h3 class="bg-primary col-md-12">帳號不能同身分證字號，請修改</h3>
+    <?php }?>
+        <div class="form-group col-md-12">
+            <label for="inputNewAccount" class="control-label">新帳號：<span class="text-danger">(帳號最少8碼，且為英數組合，第一字不可為數字。)</span></label>
+            <div >
+                <div class="form-group col-md-6">
+                    <input type="text" class="form-control" id="inputNewAccount" data-minlength="8" pattern="^[A-z][A-z0-9]{1,}$" name="newAccount" placeholder="請輸入新帳號" value="<?php echo $gpaccount;?>" <?php echo ($isCheckMode)?"required":"";?> >
+                    <div class="help-block with-errors"></div>
+                </div>
+                <div class="form-group col-md-6">
+                    <input type="text" class="form-control" id="inputConfirmAccount" data-match="#inputNewAccount" data-match-error="兩次輸入帳號不吻合" name="confirmAccount" value="<?php echo $gpaccount;?>" placeholder="請再次輸入新帳號" <?php echo ($isCheckMode)?"required":"";?> >
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+        </div>
+    <?php }?>    
+    <?php if( (!$isCheckMode) || (isset($_SESSION["changePassword"]) && $_SESSION["changePassword"]) ){ ?>
+    <?php if ($isCheckMode) {?>
+        <h3 class="bg-primary col-md-12">密碼不能同身分證字號，請修改</h3>
+    <?php }?>
+        <div class="form-group col-md-12">
+            <label for="inputNewPassword" class="control-label">新密碼：<span class="text-danger">(密碼最少12碼，且要有大小寫英文及數字之組合，不可有特殊符號。)</span></label>
+            <div>
+                <div class="form-group col-md-6">
+                    <input type="password" class="form-control" id="inputNewPassword" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*[\W]).{12,}" data-minlength="12" name="newPassword" placeholder="請輸入新密碼" <?php echo ($isCheckMode)?"required":"";?> >
+                    <div class="help-block with-errors col-md-12"></div>
+                </div>
+                <div class="form-group col-md-6">
+                    <input type="password" class="form-control" id="inputConfirmPassword" data-match="#inputNewPassword" data-match-error="兩次輸入密碼不吻合" name="confirmPassword" placeholder="請再次輸入新密碼" <?php echo ($isCheckMode)?"required":"";?> >
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+        </div>
+        <br/>
+    <?php }?> 
+        <div class="form-group">
+            <button type="submit" class="btn btn-default" data-id="<?php echo hash('sha256', $gpid);?>" >儲存</button>
+            <div class="save-msg label"></div>
+        </div>
+    </form>  
+<?php exit;?>
